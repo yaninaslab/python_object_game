@@ -35,7 +35,7 @@ class GameBoard:
         for i in range(len(self.board)):
             for j in range(len(self.board[i])):
                 if i == playerRow and j == playerColumn:
-                    print("P", end="")
+                    print(" P ", end="")
                 else:
                     print(self.board[i][j], end="")
             print("")
