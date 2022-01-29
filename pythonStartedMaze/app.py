@@ -1,4 +1,4 @@
-from select import select
+
 import gameboard
 import player
 
@@ -24,14 +24,19 @@ while True:
     selection = input("Make a move: ")
 
     # TODO
-    if selection == "a":
-        player.moveLeft(player.rowPosition, player.columnPosition)
-    elif selection == "d":
+    if selection == "a" and board.checkMove(player.rowPosition, player.columnPosition - 1) == True:
+        player.moveLeft()
+        board.checkWin(board.winningColumn, board.winningRow)
+
+    elif selection == "d" and board.checkMove(player.rowPosition, player.columnPosition + 1) == True:
         player.moveRight()
-    elif selection == "w":
+
+    elif selection == "w" and board.checkMove(player.columnPosition, player.rowPosition + 1) == True:
         player.moveUp()
-    elif selection == "s":
+
+    elif selection == "s" and board.checkMove(player.columnPosition, player.rowPosition - 1) == True:
         player.moveDown()
+
     else:
         print("Invalid entry")
     # Move the player through the board

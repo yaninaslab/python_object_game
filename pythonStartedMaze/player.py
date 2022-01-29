@@ -6,15 +6,21 @@ class Player:
         self.columnPosition = initialColumn
 
     # TODO
-    # def moveUp(self):
+    def moveUp(self):
+        self.columnPosition = self.columnPosition
+        self.rowPosition = self.rowPosition + 1
 
     # TODO
-    # def moveDown(self):
+    def moveDown(self):
+        self.columnPosition = self.columnPosition
+        self.rowPosition = self.rowPosition - 1
 
     # TODO
     def moveLeft(self):
-        Player.columnPosition = self.columnPosition - 1
-        Player.rowPosition = self.rowPosition
+        self.columnPosition = self.columnPosition - 1
+        self.rowPosition = self.rowPosition
 
     # TODO
-    # def moveRight(self):
+    def moveRight(self):
+        self.columnPosition = self.columnPosition + 1
+        self.rowPosition = self.rowPosition
