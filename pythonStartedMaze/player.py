@@ -1,3 +1,5 @@
+
+
 class Player:
     def __init__(self, intitalRow, initialColumn):
         self.rowPosition = intitalRow
@@ -10,7 +12,9 @@ class Player:
     # def moveDown(self):
 
     # TODO
-    # def moveLeft(self):
+    def moveLeft(self):
+        Player.columnPosition = self.columnPosition - 1
+        Player.rowPosition = self.rowPosition
 
     # TODO
     # def moveRight(self):

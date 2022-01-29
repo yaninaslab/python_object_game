@@ -1,3 +1,4 @@
+from select import select
 import gameboard
 import player
 
@@ -23,6 +24,15 @@ while True:
     selection = input("Make a move: ")
 
     # TODO
-
+    if selection == "a":
+        player.moveLeft(player.rowPosition, player.columnPosition)
+    elif selection == "d":
+        player.moveRight()
+    elif selection == "w":
+        player.moveUp()
+    elif selection == "s":
+        player.moveDown()
+    else:
+        print("Invalid entry")
     # Move the player through the board
     # Check if the player has won, if so print a message and break the loop!
