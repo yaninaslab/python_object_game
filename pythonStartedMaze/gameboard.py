@@ -52,6 +52,5 @@ class GameBoard:
     # Return False otherwise
     def checkWin(self, playerRow, playerColumn):
         if self.winningRow == playerRow and self.winningColumn == playerColumn:
-            print("Congrats, you have won!")
             return True
         return False

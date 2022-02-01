@@ -8,12 +8,12 @@ class Player:
     # TODO
     def moveUp(self):
         self.columnPosition = self.columnPosition
-        self.rowPosition = self.rowPosition + 1
+        self.rowPosition = self.rowPosition - 1
 
     # TODO
     def moveDown(self):
         self.columnPosition = self.columnPosition
-        self.rowPosition = self.rowPosition - 1
+        self.rowPosition = self.rowPosition + 1
 
     # TODO
     def moveLeft(self):

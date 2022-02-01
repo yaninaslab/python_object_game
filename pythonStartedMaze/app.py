@@ -26,18 +26,24 @@ while True:
     # TODO
     if selection == "a" and board.checkMove(player.rowPosition, player.columnPosition - 1) == True:
         player.moveLeft()
-        board.checkWin(board.winningColumn, board.winningRow)
 
     elif selection == "d" and board.checkMove(player.rowPosition, player.columnPosition + 1) == True:
         player.moveRight()
 
-    elif selection == "w" and board.checkMove(player.columnPosition, player.rowPosition + 1) == True:
+    elif selection == "w" and board.checkMove(player.rowPosition - 1, player.columnPosition) == True:
         player.moveUp()
 
-    elif selection == "s" and board.checkMove(player.columnPosition, player.rowPosition - 1) == True:
+    elif selection == "s" and board.checkMove(player.rowPosition + 1, player.columnPosition) == True:
         player.moveDown()
 
     else:
         print("Invalid entry")
+
+    board.checkWin(player.rowPosition, player.columnPosition)
+    result = board.checkWin(player.rowPosition, player.columnPosition)
+    if result == True:
+        print("Congrats, you have won!")
+        exit()
+
     # Move the player through the board
     # Check if the player has won, if so print a message and break the loop!
